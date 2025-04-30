@@ -5,7 +5,7 @@ This is a basic **FastAPI** project that displays a "Hello World" message.
 
 ## Create project 
 ```bash 
-uv init fastapi_clean_architecture
+uv init fastapi_basic
 ```
 
 ## Create venv
