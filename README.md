@@ -21,9 +21,36 @@ uv add fastapi
 
 ## Run the project
 ```bash
-uv run uvicorn main:app --reload
+uv run uvicorn src.main:app --reload
 or
-uv run uvicorn main:app --port 8000
+uv run uvicorn src.main:app --port 8000
+```
+
+## Unit test
+Create a new folder tests , add a new file call test_main.py and the file __init__.py
+Create a new folder src , move the main.py file to that directory
+
+### Install packages
+```bash
+uv add pytest --dev 
+uv add pytest-mock --dev
+uv add httpx --dev
+```
+
+### Coverage
+```bash
+coverage run -m pytest
+coverage report
+coverage html
+```
+
+## Linter and formatting using Ruff 
+```bash
+uv add ruff --dev
+
+uvx ruff check src/main.py
+uvx ruff check src/main.py --fix
+uvx ruff format src/main.py
 ```
 
 ## Testing on postman or ThunderClient
